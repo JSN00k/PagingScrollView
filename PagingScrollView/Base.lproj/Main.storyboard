@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,14 +24,43 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GL1-wF-c2k" userLabel="ContentsView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-9I-fKl" userLabel="Page1">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                <color key="backgroundColor" red="1" green="0.82113155500484691" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="335"/>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-FW-Ui7" userLabel="Page2">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                <color key="backgroundColor" red="0.078213552827829824" green="0.82554354297339194" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="400" y="0.0" width="400" height="335"/>
+                                                </variation>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="cx2-9I-fKl"/>
+                                                <exclude reference="Sjy-FW-Ui7"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="800" height="335"/>
+                                            <mask key="subviews">
+                                                <include reference="cx2-9I-fKl"/>
+                                                <include reference="Sjy-FW-Ui7"/>
+                                            </mask>
                                         </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="GL1-wF-c2k" secondAttribute="width" multiplier="2" id="BPR-8U-f0e"/>
+                                    <constraint firstAttribute="height" secondItem="GL1-wF-c2k" secondAttribute="height" id="LKB-ym-Cdf"/>
                                     <constraint firstAttribute="height" constant="335" id="LdS-no-Jmr"/>
+                                    <constraint firstItem="GL1-wF-c2k" firstAttribute="leading" secondItem="fVY-sh-29b" secondAttribute="leading" id="TfM-A4-l7r"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -38,6 +68,9 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="LdS-no-Jmr"/>
+                                        <exclude reference="BPR-8U-f0e"/>
+                                        <exclude reference="LKB-ym-Cdf"/>
+                                        <exclude reference="TfM-A4-l7r"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -47,6 +80,9 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="LdS-no-Jmr"/>
+                                        <include reference="BPR-8U-f0e"/>
+                                        <include reference="LKB-ym-Cdf"/>
+                                        <include reference="TfM-A4-l7r"/>
                                     </mask>
                                 </variation>
                             </scrollView>
