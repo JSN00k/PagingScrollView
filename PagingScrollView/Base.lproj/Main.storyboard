@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-sh-29b">
@@ -41,9 +41,9 @@
                                             <constraint firstItem="Sjy-FW-Ui7" firstAttribute="top" secondItem="GL1-wF-c2k" secondAttribute="top" id="Ldf-3s-iiV"/>
                                             <constraint firstItem="cx2-9I-fKl" firstAttribute="leading" secondItem="GL1-wF-c2k" secondAttribute="leading" id="SQA-oz-833"/>
                                             <constraint firstItem="cx2-9I-fKl" firstAttribute="top" secondItem="GL1-wF-c2k" secondAttribute="top" id="Yc5-a5-PoQ"/>
+                                            <constraint firstAttribute="width" secondItem="cx2-9I-fKl" secondAttribute="width" multiplier="2" id="ejP-oc-hzT"/>
                                             <constraint firstAttribute="bottom" secondItem="cx2-9I-fKl" secondAttribute="bottom" id="euR-FP-McX"/>
                                             <constraint firstAttribute="width" secondItem="Sjy-FW-Ui7" secondAttribute="width" multiplier="2" id="fhA-UI-9c8"/>
-                                            <constraint firstAttribute="width" secondItem="cx2-9I-fKl" secondAttribute="width" multiplier="2" id="nXE-45-son"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
@@ -53,8 +53,8 @@
                                             <mask key="constraints">
                                                 <exclude reference="SQA-oz-833"/>
                                                 <exclude reference="Yc5-a5-PoQ"/>
+                                                <exclude reference="ejP-oc-hzT"/>
                                                 <exclude reference="euR-FP-McX"/>
-                                                <exclude reference="nXE-45-son"/>
                                                 <exclude reference="4cI-F3-N3e"/>
                                                 <exclude reference="Gjy-Yw-oz2"/>
                                                 <exclude reference="Ldf-3s-iiV"/>
@@ -69,8 +69,8 @@
                                             <mask key="constraints">
                                                 <include reference="SQA-oz-833"/>
                                                 <include reference="Yc5-a5-PoQ"/>
+                                                <include reference="ejP-oc-hzT"/>
                                                 <include reference="euR-FP-McX"/>
-                                                <include reference="nXE-45-son"/>
                                                 <include reference="4cI-F3-N3e"/>
                                                 <include reference="Gjy-Yw-oz2"/>
                                                 <include reference="Ldf-3s-iiV"/>
@@ -87,6 +87,8 @@
                                     <constraint firstAttribute="height" constant="335" id="LdS-no-Jmr"/>
                                     <constraint firstItem="GL1-wF-c2k" firstAttribute="leading" secondItem="fVY-sh-29b" secondAttribute="leading" id="TfM-A4-l7r"/>
                                     <constraint firstItem="GL1-wF-c2k" firstAttribute="leading" secondItem="fVY-sh-29b" secondAttribute="leading" id="Voq-HK-sTk"/>
+                                    <constraint firstItem="cx2-9I-fKl" firstAttribute="width" secondItem="fVY-sh-29b" secondAttribute="width" id="eAa-UI-O4L"/>
+                                    <constraint firstItem="cx2-9I-fKl" firstAttribute="width" secondItem="fVY-sh-29b" secondAttribute="width" id="fgr-fl-qxO"/>
                                     <constraint firstAttribute="bottom" secondItem="GL1-wF-c2k" secondAttribute="bottom" id="uR9-i2-UwO"/>
                                 </constraints>
                                 <variation key="default">
@@ -102,6 +104,8 @@
                                         <exclude reference="TfM-A4-l7r"/>
                                         <exclude reference="Voq-HK-sTk"/>
                                         <exclude reference="uR9-i2-UwO"/>
+                                        <exclude reference="eAa-UI-O4L"/>
+                                        <exclude reference="fgr-fl-qxO"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -117,15 +121,17 @@
                                         <include reference="TfM-A4-l7r"/>
                                         <include reference="Voq-HK-sTk"/>
                                         <include reference="uR9-i2-UwO"/>
+                                        <exclude reference="eAa-UI-O4L"/>
+                                        <exclude reference="fgr-fl-qxO"/>
                                     </mask>
                                 </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="fVY-sh-29b" secondAttribute="trailing" constant="-16" id="7Oz-ZI-EXV" userLabel="scrollRight"/>
+                            <constraint firstAttribute="trailing" secondItem="fVY-sh-29b" secondAttribute="trailing" id="7Oz-ZI-EXV" userLabel="scrollRight"/>
                             <constraint firstItem="fVY-sh-29b" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Jue-tV-oRM" userLabel="scrollTop"/>
-                            <constraint firstItem="fVY-sh-29b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NKY-x1-bAf" userLabel="scrollLeft"/>
+                            <constraint firstItem="fVY-sh-29b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NKY-x1-bAf" userLabel="scrollLeft"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
