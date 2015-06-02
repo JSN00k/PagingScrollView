@@ -4,7 +4,7 @@ A sample application that makes a horizontally paging scrollView in a storyboard
 
 ### Getting the repo
 
-You can download this repository using the cloud icon on the left (when on the bitbucket website) Or you can use Mercurial.
+You can download this repository using the this [link](https://bitbucket.org/James_Snook/pagingscrollview/get/8aea58b47960.zip)
 
 ###Getting Mercurial
 
