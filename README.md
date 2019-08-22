@@ -1,17 +1,3 @@
 # README #
 
 A sample application that makes a horizontally paging scrollView in a storyboard that copes with screens of different widths.
-
-### Getting the repo
-
-You can download this repository using the this [link](https://bitbucket.org/James_Snook/pagingscrollview/get/8aea58b47960.zip), or by cloning it using Mercurial.
-
-###Getting Mercurial
-
-First you will need to get Mercurial on your Mac if it isn't already there. There are some instruction [here](https://confluence.atlassian.com/pages/viewpage.action?pageId=269981802) to install Mercurial. You can skip the Git steps and go straight to Step 3.
-
-#### Clone with Mercurial
-
-To clone the repository with mercurial use the following command:
-
-    hg clone https://bitbucket.org/James_Snook/pagingscrollview
